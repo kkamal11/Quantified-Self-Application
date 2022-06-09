@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="../static/no_tracker.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id="heading">
+                    <h3><em>QuantifiedSelf App</em></h3>
+                    <span class="log-out" id="date"> {{ today_date }}</span>
+                    <!-- <a href="/my_diary" class="log-out" id="diary" ><em>My Diary</em></a> -->
+                    <a href="/" class="log-out" >Log out</a>
+                </div>
+            </div>
+        </header>
+        <section class="c">
+            <h3 id="user">&#128075;Hello {{ session.username }}!</h3>
+            <h3>You don't have any active tracker. Click Below to create one!</h3>
+            <button type="button"><a href="/create_tracker">Create a tracker</a></button>
+        </section>
+    </body>
+</html>

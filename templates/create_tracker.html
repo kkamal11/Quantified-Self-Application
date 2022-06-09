@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a tracker</title>
+    <!-- A little Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/create_tracker.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3><em>QuantifiedSelf App</em></h3>
+                <span class="log-out" id="date"> {{ today_date }}</span>
+                <!-- <a href="/my_diary" class="log-out" id="diary" >My Diary</a> -->
+                <a href="/" class="log-out" >Log out</a>
+            </div>
+        </div>
+    </header>
+    <div >
+        <div id="t">
+            <h2 class="c">Create a tracker</h2>
+        </div>
+        <form action="/create_tracker" method="post">
+            <label for="tname">Tracker Name:</label>
+            <input type="text" id="tname" name="tracker_name" placeholder="eg. Running" required><br><br>
+            <label for="desc">Description:</label><br>
+            <input type="text" id="desc" name="description" placeholder="Briefly Describe your tracker">
+            <br>
+            <label for="choice">Tracker Type:</label>
+            <select name="tracker_type" id="choice" class="c">
+                <option value="Numerical">Numerical</option>
+                <option value="Multiple Choice">Multiple Choice</option>
+                <option value="Boolean">Boolean</option>
+            </select>
+            <br><br>
+            <script>
+                $('#choice').change(function() {
+                    if($(this).val() == "Multiple Choice")
+                        $('#txtData').show();
+                    else
+                        $('#txtData').hide();
+                });
+                $('#choice').change(function() {
+                    if($(this).val() == "Multiple Choice")
+                        $('#txtData1').show();
+                    else
+                        $('#txtData1').hide();
+                });
+            </script>
+            <label for="txtData" id="txtData" style="display:none;">Settings:</label>
+            <input type="text" id="txtData1" name="setting" style="display:none;" placeholder="Setting should be comma separated. eg. Happy, Sad etc"/>
+            <br>
+            <br>
+            <input class="button" type="submit" value="Create it!">
+        </form>
+    <div>
+</body>
+</html>

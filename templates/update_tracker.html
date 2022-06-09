@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a tracker</title>
+    <link rel="stylesheet" href="../static/create_tracker.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3><em>QuantifiedSelf App</em></h3>
+                <span class="log-out" id="date"> {{ today_date }}</span>
+                <!-- <a href="/my_diary" class="log-out" id="diary">My Diary</a> -->
+                <a href="/" class="log-out" >Log out</a>
+            </div>
+        </div>
+    </header>
+    <div >
+        <div id="t">
+            <h2 class="c">Update the tracker</h2>
+        </div>
+        <form action="/update/{{ tracker.tracker_id }}" method="post">
+            <label for="tname">Tracker Name:</label>
+            <input type="text" id="tname" name="tracker_name" value="{{ tracker.tracker_name}}" required><br><br>
+            <label for="desc">Description:</label><br>
+            <input type="text" id="desc" name="description" value="{{ tracker.tracker_description }}">
+            <br>
+            <label for="choice">Tracker Type:</label>
+            <select name="tracker_type" id="choice" class="c" disabled>
+                <option value="Numerical">{{ tracker.tracker_type }}</option>
+                <option value="Multiple Choice">Multiple Choice</option>
+                <option value="Boolean">Boolean</option>
+                <option value="Time Duration">Time Duration</option> 
+            </select>
+            <br>
+            <br>
+            <input type="submit" class="button" value="Save it!">
+        </form>
+    <div>
+</body>
+</html>

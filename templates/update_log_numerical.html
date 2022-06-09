@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/updatelog.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3 class="c"><em>QuantifiedSelf App</em></h3>
+                <a href="/" id="log-out" ><em>Log out</em></a>
+            </div>
+        </div>
+    </header>
+    <h1 id="tracker">{{ tt }} Tracker</h1>
+    <h2 id="h3">Log a new value to the tracker</h2>
+    <div id="form-center">
+        <form action="/update/log/{{ log_id }}" method="post">
+            <label for="time">Current time:</label>
+            <input type="text" id="time" name="ctime" value="{{ ctime.date() }}  {{ ctime.strftime('%I:%M:%S %p') }}" required><br>
+            <label for="value">New Value:</label>
+            <input type="number" step="0.001" name="value" id="value" placeholder="Enter any numerical value." required><br>
+            <label for="note">New Note:</label>
+            <input type="text" name="notes" id="notes" placeholder="Write a note for this tracker."><br><br>
+            <input type="submit" value="Update it!">
+        </form>
+        <h3>Or</h3>
+        <form action="/dashboard">
+            <input type="submit" value="Go Back to Dashboard">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/*For all pages common */
+body{
+    background-color: rgb(214, 208, 214);
+    margin: 0;
+}
+.container {
+    background-color: #2f3aa0;
+    padding: 5px;
+    padding: 15px 0 15px 0;
+}
+
+header #heading h3{
+    display: inline;
+}
+
+#heading{
+    color: beige;
+    font-size: 22px;
+    padding-left: 20px;
+}
+header a {
+    color: #2f3aa0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    opacity: 0.95;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: rgb(20, 220, 20);
+    background:#fff;
+    opacity: 1;
+}
+.log-out{
+    position: relative;
+    left: 48%;
+}
+
+.log-out{
+    position: relative;
+    left: 58%;
+}
+
+/* #diary{
+    margin-right: 40px;
+} */
+#date{
+    margin-right: 50px;
+    font-weight: bold;
+}
+/*For all pages common */
+
+
+button{
+    background-color: brown;
+    font-size: 16px;
+    padding: 5px;
+}
+
+button a{
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+#user {
+    margin-top: 12%;;
+    color: #2f3aa0;
+}
+
+.c{
+    text-align: center;
+    
+}

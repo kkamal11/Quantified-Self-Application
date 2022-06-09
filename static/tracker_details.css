@@ -1,0 +1,180 @@
+body{
+    background-color: rgb(214, 208, 214);
+    margin: 0;
+}
+.container {
+    background-color: #2f3aa0;
+    padding: 5px;
+    padding: 15px 0 15px 0;
+}
+
+header #heading h3{
+    display: inline;
+}
+
+#heading{
+    color: beige;
+    font-size: 22px;
+    padding-left: 20px;
+}
+header a {
+    color: #2f3aa0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    opacity: 0.95;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: rgb(20, 220, 20);
+    background:#fff;
+    opacity: 1;
+}
+.log-out{
+    position: relative;
+    left: 58%;
+}
+
+/* #diary{
+    margin-right: 40px;
+} */
+#date{
+    margin-right: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#tracker{
+    text-align: center;
+    color: #2f3aa0;
+}
+
+.wrapper{
+    margin-left: 7%;
+    display: grid;
+    column-gap: 10%;
+    grid-template-columns: 40% 40%;
+    
+}
+
+table,th, td{
+    border: 1px solid #2f3aa0;
+}
+
+table td,table th{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+td a{
+    text-decoration: none;
+    line-height: 2;
+}
+
+#detail {
+    margin-right: 290px;
+    margin-left: 290px;
+    margin-top: 30px;
+}
+#detail th,td{
+    padding: 5px;
+    margin-right: 2px;
+    border-collapse: collapse;
+}
+
+.c a{
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.c a:hover{
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.c a:visited{
+    text-decoration: none;
+}
+
+td[colspan="3"]{
+    text-align: center;
+    text-decoration: underline;
+    background-color: rgb(144, 176, 243);
+    font-weight: bold;
+}
+
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+#total{
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(144, 176, 243);
+    color: black;
+}
+
+
+div a[title="Are you sure to delete this?"]{
+    color:aliceblue;
+    background-color: red;
+    border-radius: 10px;
+}
+
+div a[title="Are you sure to update this?"]{
+    color:aliceblue;
+    background-color:green;
+    border-radius: 10px;
+}
+
+tr{
+    height: 40px;
+}
+img{
+   max-width: fit-content;
+   max-height: fit-content;
+   width: 500px;
+   height: 350px;
+   border-radius: 20px;
+}
+
+.chart{
+    margin-left: 180px;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+    color: maroon;
+    text-decoration: underline;
+
+}
+
+span{
+    text-decoration: underline;
+}
+
+.scatter{
+    
+    text-align: center;
+    margin-top: 30px;
+    color: maroon;
+    text-decoration: underline;
+}
+
+.button{
+    background-color: brown;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    left: 550px;
+    color: aliceblue;
+}
+
+.button:hover{
+    background-color: rgb(191, 18, 18);
+}

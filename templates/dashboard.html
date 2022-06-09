@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/dashboard.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3><em>QuantifiedSelf App</em></h3>
+                <span class="log-out" id="date"> {{ today_date }}</span>
+                <!-- <a href="/my_diary" class="log-out" id="diary">My Diary</a> -->
+                <a href="/" class="log-out" >Log out</a>
+            </div>
+        </div>
+    </header>
+    <br><br>
+    <h2 id="welcome">&#128075;Hi, {{ session.username }}</h2>
+    <br>
+    <a class="btn tabular" href="/grid_view" >Switch to Grid View</a>
+    <div class="center">
+        <table>
+            <thead>
+                <th>S No.</th>
+                <th>Tracker</th>
+                <th>Last tracked On</th>
+                <th>Log a new event</th>
+                <th>Actions</th>
+            </thead>
+            <tbody>
+                {% if trackers == [] %}
+                    <tr><td></td></tr>
+                    <tr><td style="text-align:center" colspan="5">You don't have any active tracker.</td></tr>
+                    <tr><td></td></tr>
+                {% endif %}
+                {% for event in trackers %}
+                    <tr>
+                        <td class="c"> {{ loop.index }}</td>
+                        <td><a href="/tracker_detail/{{ event.tracker_id }}" title="Click to see tracker details"> {{ event.tracker_name }}</a></td>
+                        <td>{{ event.track_time.date() }} at {{ event.track_time.strftime("%I:%M:%S %p") }}</td>
+                        <td class="c"><a href="/log/{{ event.tracker_id }}" title="Click to add a new event" id="plus">+</a></td>
+                        <td>
+                            <div class="c">
+                                <a href="/update/{{ event.tracker_id }}" title="Are you sure to edit this?">Edit</a>
+                                <a id="msg" href="/delete/tabular/{{ event.tracker_id }}" title="Are you sure to delete this?">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <br>
+    <button type="button"><a href="/create_tracker" id="t">Add another tracker</a></button>
+</body>
+</html>

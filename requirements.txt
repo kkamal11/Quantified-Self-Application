@@ -1,0 +1,4 @@
+flask
+flask_SQLAlchemy
+matplotlib
+flask-restful

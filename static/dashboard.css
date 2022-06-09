@@ -1,0 +1,185 @@
+/*For all pages common */
+body{
+    background-color: rgb(214, 208, 214);
+    margin: 0;
+}
+.container {
+    background-color: #2f3aa0;
+    padding: 5px;
+    padding: 15px 0 15px 0;
+}
+
+header #heading h3{
+    display: inline;
+}
+
+#heading{
+    color: beige;
+    font-size: 22px;
+    padding-left: 20px;
+}
+header a {
+    color: #2f3aa0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    opacity: 0.95;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: rgb(20, 220, 20);
+    background:#fff;
+    opacity: 1;
+}
+.log-out{
+    position: relative;
+    left: 58%;
+}
+
+/* #diary{
+    margin-right: 40px;
+} */
+#date{
+    margin-right: 50px;
+    font-weight: bold;
+}
+/*For all pages common */
+
+
+#trendline{
+    margin-right: 60px;
+}
+
+.center{
+    width: 70%;
+    margin-left: 25%;
+    margin-top: 30px;
+}
+
+td a{
+    text-decoration: none;
+    line-height: 1.7;
+}
+
+th{
+    padding-right: 20px;
+    text-decoration: underline;
+}
+
+
+button{
+    background-color: brown;
+    font-size: 16px;
+    padding: 8px;
+    margin: 0 35% 0 45%;
+    border: none;
+    border-radius: 12px;
+}
+
+button:hover{
+    background-color: rgb(191, 18, 18);
+}
+
+#t{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+#plus{
+    background-color: rgb(110, 109, 110);
+    padding: 5px 15px 5px 15px;
+    width: 25px;
+    color: aliceblue;
+    font-weight: 900;
+    border-radius: 20px;
+}
+
+td a:hover{
+    font-weight: bolder;
+    text-decoration: underline;
+
+}
+
+table th{
+    background-color: #abafd1;
+    padding: 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+td,th{
+    width: 120px;
+}
+
+.c {
+    text-align: center;
+}
+
+div td a{
+    margin-right: 5px;
+    padding: 6px;
+}
+div td a:hover{
+    font-weight: bold;
+    font-style: italic;
+}
+
+tr:nth-child(even) {
+    background-color: #c6c7cf;
+}
+
+tr:hover {
+    background-color: rgb(250, 160, 127);
+}
+
+div a[title="Are you sure to delete this?"]{
+    color:aliceblue;
+    background-color: red;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 10px;
+}
+
+div a[title="Are you sure to edit this?"]{
+    color:aliceblue;
+    background-color:green;
+    border-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+tr{
+    height: 40px;
+}
+
+.btn{
+    background-color: #2f3aa0;
+    margin-left: 60px;
+    padding: 10px 20px 10px 20px;
+   
+    text-decoration: none;
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+.tabular{
+    margin-left: 550px;
+}
+
+#welcome{
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 22px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(61, 8, 185);
+    font-style: italic;
+}

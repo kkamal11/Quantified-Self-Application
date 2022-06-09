@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="welcome">
+        <em>
+            <h1>Hi there!</h1>
+            <h2>Welcome to QuantifiedSelf App</h2>
+        </em>
+    </div>
+    <p id="please-login"> <em>Please login to continue!</em></p>
+    <div>
+        <form name = login action="/login" method="post">
+        
+            <div class="container">
+                <label for="uname"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" id="uname" name="username" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="psw" name="password" required>
+            
+                <button onclick = validateForm()>Login</button>
+            </div>
+        </form>
+    </div>
+    <!-- <script>
+        function validateForm() {
+            let x = document.forms["login"]["username"].value;
+            if (x == "") {
+                alert("Username must be filled out");
+                return false;
+            }
+            else if(x.length <= 4){
+                alert("Username must be greater than 5 in character.");
+                return False;
+            }
+
+        }
+    </script> -->
+</body>
+</html>

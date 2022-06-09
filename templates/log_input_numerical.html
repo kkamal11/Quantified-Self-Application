@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/log.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3><em>QuantifiedSelf App</em></h3>
+                <span class="log-out" id="date"> {{ today_date }}</span>
+                <!-- <a href="/my_diary" class="log-out" id="diary">My Diary</a> -->
+                <a href="/" class="log-out" >Log out</a>
+            </div>
+        </div>
+    </header>
+    <h1 id="tracker">{{ trname }} Tracker</h1>
+    <p id="tracker-type">Tracker type: {{ tracker_type }}</p>
+    <h2 id="h3">Log a new value to the tracker</h2>
+    <div id="form-center">
+        <form action="/log/{{ tt }}" method="post">
+            <label for="time">Current time:</label>
+            <input type="text" id="time" name="ctime" value="{{ ctime.date() }}  {{ ctime.strftime('%I:%M:%S %p') }}" required><br>
+            <label for="value">Value:</label>
+            <input type="number" step="0.01" name="value" id="value" placeholder="Enter any numerical value" required><br>
+            <label for="note">Notes:</label>
+            <input type="text" name="notes" id="notes" placeholder="Write a note for this tracker."><br><br>
+            <input class="button" type="submit" value="Log it!">
+        </form>
+        <h3>Or</h3>
+        <a href="/dashboard" class="button">Go Back to Dashboard</a>
+    </div>
+</body>
+</html>

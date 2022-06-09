@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard|Grid View</title>
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        -->
+    <link rel="stylesheet" href="../static/card_view.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3><em>QuantifiedSelf App</em></h3>
+                <span class="log-out" id="date"> {{ today_date }}</span>
+                <!-- <a href="/my_diary" class="log-out" id="diary" >My Diary</a> -->
+                <a href="/" class="log-out" >Log out</a>
+            </div>
+        </div>
+    </header>
+    <br><br>
+    <a class="btn tabular" href="/dashboard" >Switch to Tabular View</a>
+        {% if trackers == [] %}
+        <table>
+            <tr><td></td></tr>
+            <tr><td style="text-align:center" colspan="5">You don't have any active tracker.</td></tr>
+            <tr><td></td></tr>
+        </table>
+        {% endif %}
+        <div class="wrapper1">
+            {% for tracker in trackers %}
+                <div class="card">
+                    <div class="card-img-top">
+                        <div>
+                            <img src="../static/numerical_log_linechart.png" alt="No Graph made till Now">
+                        </div>
+                    </div>
+                    <h3 class="card-title">{{ tracker.tracker_name }} Tracker</h3>
+                    <div class="card-text">{{ tracker.tracker_description }}</div>
+                    <a class="btn btn-primary" href="/tracker_detail/{{ tracker.tracker_id }}" title="Click to see tracker details"> Tracker's log Details</a>
+                    <br><br><br>
+                    <a class="other-btn other-btn1" href="/update/{{ tracker.tracker_id }}" title="Are you sure to edit this?">Edit it.</a>
+                    <a class="other-btn other-btn2" href="/delete/grid/{{ tracker.tracker_id }}" title="Are you sure to delete this?">Delete it.</a>
+                </div>
+            {% endfor %}
+        </div>
+        <br>
+        <button type="button"><a href="/create_tracker" id="t">Add another tracker</a></button>
+</body>
+</html>

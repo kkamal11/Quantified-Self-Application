@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(214, 208, 214);
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url(../static/diary.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+
+}
+/*For all pages common */
+.container {
+    background-color: #2f3aa0;
+    padding: 5px;
+    padding: 15px 0 15px 0;
+}
+
+header #heading h3{
+    display: inline;
+}
+
+#heading{
+    color: beige;
+    font-size: 22px;
+    padding-left: 20px;
+}
+header a {
+    color: #2f3aa0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    opacity: 0.95;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: rgb(20, 220, 20);
+    background:#fff;
+    opacity: 1;
+}
+.log-out{
+    position: relative;
+    left: 40%;
+}
+
+#diary{
+    margin-right: 40px;
+}
+#date{
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+
+
+.welcome{
+    margin-top: 0;
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 22px;
+    color: rgb(61, 8, 185);
+    font-style: italic;
+}
+
+/* #top-welcome{
+    margin-top: 50px;
+} */
+
+#btn-div{
+    transform:rotate(-20deg);
+    text-align: center;
+    margin-top: 7%;
+}
+button{
+    padding: 7px 20px ;
+    background-color: #2f3aa0;
+    border-radius: 7px;
+    border-width: 1px;
+    color: aliceblue;
+    font-weight: bold;
+    opacity: 0.8;
+}
+button:hover{
+    cursor: pointer;
+    opacity: 1;
+    color: white;
+}
+
+#btn-1{
+    margin-right: 15%;
+}
+
+
+/* #welcome-div{
+} */
+
+

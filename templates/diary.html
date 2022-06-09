@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/diary.css">
+    <title>My Diary</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3><em>QuantifiedSelf App</em></h3>
+                <span class="log-out" id="date"> {{ today_date }}</span>
+                <a href="/dashboard" class="log-out" id="diary" >Dashboard</a>
+                <a href="/" class="log-out" >Log out</a>
+            </div>
+        </div>
+    </header>
+    <div id="main-content">
+        <div id="welcome-div">
+            <h2 class="welcome" id="top-welcome">&#128075;Hi, {{ session.username }}. I am your diary friend.</h2>
+            <h3 class="welcome">Tell me what is in your mind&#x1F609;...</h3>
+        </div> 
+        <div id="btn-div">
+            <button id="btn-1">Read</button>
+            <button>Write</button>
+        </div>
+    </div>
+    <div>
+        kamal
+    </div>   
+</body>
+</html>

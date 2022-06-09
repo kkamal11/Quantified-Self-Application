@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/tracker_details.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="heading">
+                <h3><em>QuantifiedSelf App</em></h3>
+                <span class="log-out" id="date"> {{ today_date }}</span>
+                <!-- <a href="/my_diary" class="log-out" id="diary" >My Diary</a> -->
+                <a href="/" class="log-out" >Log out</a>
+            </div>
+        </div>
+    </header>
+    <h1 id="tracker">{{ tr }} Tracker</h1>
+    <h4 id="tracker"><span> Description</span>: {{ td }}</h4>
+    <h4 id="tracker"><span>Tracker type</span>: {{ tracker_type }}</h4>
+    <div id="detail">
+        <table>
+            {% if t == [] %}
+                <h2 style="text-align: center;">&#128542;No record has been entered.</h2>
+            {% else %}
+                <caption style="font-weight: bold;">Log Summary</caption>
+                <thead>
+                    <th width="100px">On</th>
+                    <th>Value</th>
+                    <th>Note</th>
+                    <th width="120px">Action</th>
+                </thead>
+                <tbody>
+                    {% for event in t %}
+                    
+                        <tr>
+                            <td>{{ event.log_time.date() }} at {{ event.log_time.strftime("%I:%M:%S %p") }}</td>
+                            <td>{{ event.value }}</td>
+                            <td>{{ event.note }}</td>
+                            <td>
+                                <div class="c">
+                                    <a href="/update/log/{{ event.logs_id }}" title="Are you sure to update this?">Update</a>
+                                    <a href="/delete/log/{{ event.logs_id }}" title="Are you sure to delete this?">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    {% if total > 0 %}
+                        <tr>
+                            <td colspan="3">Total Value</td>
+                            <td id="total">{{ total }}</td>
+                        </tr>
+                    {% endif %}
+                </tbody>
+                {% endif %}
+            
+        </table>
+    </div>
+    <br><br><br>
+    <div class="wrapper">
+        <div>
+            {% if total > 0 %}
+            <caption><h2 class="chart">Bar Chart</h2></caption>
+                <img src="../static/numerical_log_barchart.png">
+            {% endif %}
+        </div>
+        <div>
+            {% if total > 0%}
+                <caption><h2 class="chart">Line Chart</h2></caption>
+                <img src="../static/numerical_log_linechart.png">
+            {% endif %}
+        </div>
+    </div>
+    {% if total > 0 %}
+        <details class="scatter" title="Click me to See scatter plot too.">
+            <summary style="font-size: 24px; font-weight: bold;">Scatter Plot</summary>
+            <div class="scatter">
+                <img src="../static/numerical_log_scatterplot.png">
+            </div>
+        </details>
+    {% endif %}
+    <br>
+    <a href="/dashboard" class="button">Go Back to Dashboard</a>
+</body>
+</html>

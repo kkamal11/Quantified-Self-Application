@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/wrong_pass.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Oops! Your password was incorrect. Please enter the correct one!</h2>
+    <div id="back">
+        <a href="/login" >Login again</a>
+    </div>
+    <br><br>
+    <div>
+        <a id="reset" href="/reset/account/{{ session.username }}" title="This will delete all your data as well. Are you sure?">Reset My Account</a>
+    </div>
+</body>
+</html>

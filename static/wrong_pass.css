@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(214, 208, 214);
+}
+
+h2{
+    text-align: center;
+    margin-top: 15%;
+    color: #2f3aa0;
+}
+h3{
+    text-align: center;
+    color: #2f3aa0;
+}
+
+#back{
+    text-align: center;
+    background-color: brown;
+    width: 100px;
+    padding: 7px;
+    position: relative;
+    left: 45%;
+    border: 1.5px solid black;
+    font-size: 16px;
+}
+
+#back a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+#reset{
+    width: 200px;
+    background-color: red;
+    color: aliceblue;
+    padding: 10px;
+    text-decoration: none;
+    position: relative;
+    left: 44%;
+}

@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(214, 208, 214);
+}
+.welcome{
+    text-align: center;
+    color: #2f3aa0;
+    padding-bottom: 25px;
+}
+  
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    position: relative;
+    left: 300px;
+}
+
+button {
+    background-color: #2f3aa0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    position: relative;
+    left: 300px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+  
+.container {
+    position: relative;
+    padding: 16px;
+    width: 60%;
+    
+}
+
+#please-login{
+    position: relative;
+    left: 317px;
+    color: #2f3aa0;
+    font-size: large;
+}
+
+
+label {
+    color: #2f3aa0;
+    font-weight: bold;
+    position: relative;
+    left: 300px;
+    padding-bottom: 5px;
+    
+}
+select{
+    position: relative;
+    left: 300px;
+}

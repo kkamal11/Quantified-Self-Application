@@ -1,0 +1,103 @@
+
+body{
+    background-color: rgb(214, 208, 214);
+    margin: 0;
+}
+.container {
+    background-color: #2f3aa0;
+    padding: 5px;
+    padding: 15px 0 15px 0;
+}
+
+header #heading h3{
+    display: inline;
+}
+
+#heading{
+    color: beige;
+    font-size: 22px;
+    position: relative;
+    left: 30%;
+}
+header a {
+    color: beige;
+    text-decoration: none;
+
+}
+
+header a {
+    color: #2f3aa0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    opacity: 0.95;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: rgb(20, 220, 20);
+    background:#fff;
+    opacity: 1;
+}
+#log-out{
+    margin-left: 23%;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: 100px;
+    opacity: 0.7;
+}
+
+.height{
+    width: 500px;
+    border-radius: 15px;
+    margin-top: 55px;
+}
+
+#log-in{
+    width: 200px;
+    background-color: #2f3aa0;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    position: relative;
+    left: 170px;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+
+#log-in a{
+    text-decoration: none;
+    color: aliceblue;
+    width: 150px;
+}
+
+.main-text{
+    padding: 50px 120px 0 100px;
+    margin-top: 15px;
+
+}
+
+div h1{
+    color: aliceblue;
+    color: #2f3aa0;
+}
+
+.sub-text{
+    padding: 0 100px 0 100px;
+    margin-right: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}

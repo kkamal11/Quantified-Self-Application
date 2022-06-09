@@ -1,0 +1,118 @@
+/*For all pages common */
+body{
+    background-color: rgb(214, 208, 214);
+    margin: 0;
+}
+.container {
+    background-color: #2f3aa0;
+    padding: 5px;
+    padding: 15px 0 15px 0;
+}
+
+header #heading h3{
+    display: inline;
+}
+
+#heading{
+    color: beige;
+    font-size: 22px;
+    padding-left: 20px;
+}
+header a {
+    color: #2f3aa0;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-style: normal;
+    opacity: 0.95;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: rgb(20, 220, 20);
+    background:#fff;
+    opacity: 1;
+}
+.log-out{
+    position: relative;
+    left: 58%;
+}
+
+/* #diary{
+    margin-right: 40px;
+} */
+#date{
+    margin-right: 50px;
+    font-weight: bold;
+}
+
+#form-center{
+    width: 50%;
+   position: relative;
+   left: 38%;
+   color: #2f3aa0;
+   font-weight: 400;
+}
+
+form input{
+    padding: 5px;
+    margin: 5px;
+}
+
+form input[type=text]{
+    width: 200px;
+}
+
+#h3{
+    text-align: center;
+    color: #2f3aa0;
+    margin-top: 5%;
+    text-decoration: underline;
+}
+
+#tracker{
+    text-align: center;
+    color: #2f3aa0;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+
+form input[type=number]{
+    width: 245px;
+}
+
+form input[name=notes]{
+    width: 245px;
+}
+
+#tracker-type{
+    text-align: center;
+    color: #2f3aa0;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+select{
+    padding: 5px;
+    margin: 5px;
+    width: 260px;
+}
+
+.button{
+    background-color: brown;
+    font-size: 16px;
+    padding: 10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    left: 3px;
+    color: aliceblue;
+}
+
+.button:hover{
+    background-color: rgb(191, 18, 18);
+}
